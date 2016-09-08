@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Company.create(
+quizlet = Company.create(
   name: 'Quizlet', 
   website: 'https://quizlet.com',
   description: 
@@ -14,4 +14,10 @@ Company.create(
 Quizlet makes simple learning tools that let you study anything. 
 Start learning today with flashcards, games and learning tools — all for free.
     DESC
+)
+
+Position.create(
+  title: 'Software Engineer', 
+  location: 'San Francisco',
+  company_id: quizlet.id
 )

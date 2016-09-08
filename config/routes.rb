@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'companies#show'
+  root 'positions#show'
   get 'companies', to: 'companies#show'
+  get 'positions', to: 'positions#show'
 end
