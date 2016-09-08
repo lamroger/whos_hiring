@@ -1,11 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  website: MyString
-  description: MyText
-
-two:
-  name: MyString
-  website: MyString
-  description: MyText
+quizlet:
+  name: Quizlet
+  website: https://quizlet.com
+  description: Quizlet makes simple learning tools that let you study anything. Start learning today with flashcards, games and learning tools — all for free.
