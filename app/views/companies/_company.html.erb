@@ -1,0 +1,8 @@
+<li id="company-<%= company.id %>">
+  <div class="name"><%= company.name %></div>
+  <div class="website"><%= company.website %></div>
+  <div class="description"><%= company.description %></div>
+  <div class="timestamp">
+    Added <%= time_ago_in_words(company.created_at) %> ago.
+  </div>
+</li>

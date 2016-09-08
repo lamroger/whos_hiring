@@ -1,0 +1,9 @@
+<li id="position-<%= position.id %>">
+  <div class="company"><%= position.company.name %></div>
+  <div class="title"><%= position.title %></div>
+  <div class="location"><%= position.location %></div>
+  <div class="description"><%= position.description %></div>
+  <div class="timestamp">
+    Added <%= time_ago_in_words(position.created_at) %> ago.
+  </div>
+</li>
