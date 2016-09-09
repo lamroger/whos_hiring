@@ -16,6 +16,18 @@ Start learning today with flashcards, games and learning tools — all for free.
     DESC
 )
 
+Technology.create(
+  name: 'PHP'
+)
+
+Technology.create(
+  name: 'Go'
+)
+
+Technology.create(
+  name: 'React'
+)
+
 Position.create(
   title: 'Software Engineer', 
   location: 'San Francisco',
@@ -25,5 +37,6 @@ Each engineer at Quizlet gets the opportunity to punch above their weight — ow
 As an engineer at Quizlet you must care passionately about user experience, and develop a deep understanding of how users interact with Quizlet. You will not be just a cog in a machine, but rather you will attend school visits, meet with students and teachers, and have a major voice in product decisions.
 We are scaling rapidly at Quizlet. Over 20M users a month depend on us for their daily studies and demand innovative new learning tools and games. This means big engineering challenges that require smart, creative people to solve them. What are you passionate about? What technological challenges excite you? Whether it’s building robust APIs, deploying front-end performance improvements, architecting new search infrastructure, or designing new learning games, the odds are we have a challenge here you’ll be excited about.
     DESC
-  company_id: quizlet.id
+  company_id: quizlet.id,
+  technologies: Technology.where("name = 'PHP' OR name = 'Go' OR name = 'React'")
 )

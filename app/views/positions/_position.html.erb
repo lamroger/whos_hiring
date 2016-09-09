@@ -3,6 +3,13 @@
   <div class="title"><%= position.title %></div>
   <div class="location"><%= position.location %></div>
   <div class="description"><%= position.description %></div>
+  <div class="technologies">
+    <ul class="technologies-list">
+      <% position.technologies.each do |technology| %>
+        <li><%= technology.name %></li>
+      <% end %>
+    </ul>
+  </div>
   <div class="timestamp">
     Added <%= time_ago_in_words(position.created_at) %> ago.
   </div>
