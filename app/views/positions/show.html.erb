@@ -1,9 +1,21 @@
 <div class="row">
   <div class="col-md-8">
-    <ol class="position">
-      <% @positions.each do |position| %>
-        <%= render position %>
-      <% end %>
-    <ol>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Position</th>
+          <th>Location</th>
+          <th>Description</th>
+          <th>Technologies</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @positions.each do |position| %>
+          <%= render position %>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
