@@ -16,17 +16,9 @@ Start learning today with flashcards, games and learning tools — all for free.
     DESC
 )
 
-Technology.create(
-  name: 'PHP'
-)
-
-Technology.create(
-  name: 'Go'
-)
-
-Technology.create(
-  name: 'React'
-)
+['PHP', 'Go', 'React', 'Tornado', 'AWS', 'GCP', 'Docker', 'Python', 'C++', 'Javascript'].each do |name|
+  Technology.create(name: name)
+end
 
 Position.create(
   title: 'Software Engineer', 
@@ -40,3 +32,28 @@ We are scaling rapidly at Quizlet. Over 20M users a month depend on us for their
   company_id: quizlet.id,
   technologies: Technology.where("name = 'PHP' OR name = 'Go' OR name = 'React'")
 )
+
+deepgram = Company.create(
+  name: 'Deepgram', 
+  website: 'https://deepgram.com',
+  description: 
+    <<-DESC
+We do search for recorded speech using machine-learning. 
+We find keywords/phrases and predict what's in videos, podcasts, phone calls—anything with recorded speech, really.
+    DESC
+)
+
+Position.create(
+  title: 'Web Engineer', 
+  location: 'San Francisco',
+  description: 
+    <<-DESC,
+We need help building-out the speech search API and front ends. 
+Leans toward backend but creating good interfaces is needed. 
+Creativity, high energy, motivation, and experience building APIs and complicated web apps is a must. 
+Experience working with Tornado, AWS, GCP, Docker and fluency in Python, C++, Javascript is a big deal too.
+    DESC
+  company_id: deepgram.id,
+  technologies: Technology.where("name = 'Tornado' OR name = 'AWS' OR name = 'GCP' OR name = 'Docker' OR name = 'Python' OR name = 'C++' OR name = 'Javascript'")
+)
+
