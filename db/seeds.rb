@@ -16,7 +16,13 @@ Start learning today with flashcards, games and learning tools — all for free.
     DESC
 )
 
-['PHP', 'Go', 'React', 'Tornado', 'AWS', 'GCP', 'Docker', 'Python', 'C++', 'Javascript'].each do |name|
+TECHNOLOGIES = [
+  'PHP', 'Go', 'React', 'Tornado', 'AWS', 
+  'GCP', 'Docker', 'Python', 'C++', 'Javascript',
+  'HPCC', 'DNN'
+]
+
+TECHNOLOGIES.each do |name|
   Technology.create(name: name)
 end
 
@@ -25,12 +31,12 @@ Position.create(
   location: 'San Francisco',
   description: 
     <<-DESC,
-Each engineer at Quizlet gets the opportunity to punch above their weight — owning entire projects and striving for excellence and quality in design, architecture, performance and user experience. Being a member of a small, nimble team tackling big problems means that you can get creative about what technologies you deploy.
-As an engineer at Quizlet you must care passionately about user experience, and develop a deep understanding of how users interact with Quizlet. You will not be just a cog in a machine, but rather you will attend school visits, meet with students and teachers, and have a major voice in product decisions.
-We are scaling rapidly at Quizlet. Over 20M users a month depend on us for their daily studies and demand innovative new learning tools and games. This means big engineering challenges that require smart, creative people to solve them. What are you passionate about? What technological challenges excite you? Whether it’s building robust APIs, deploying front-end performance improvements, architecting new search infrastructure, or designing new learning games, the odds are we have a challenge here you’ll be excited about.
+What are you passionate about? What technological challenges excite you? 
+Whether it’s building robust APIs, deploying front-end performance improvements, architecting new search infrastructure, or designing new learning games, the odds are we have a challenge here you’ll be excited about.
     DESC
   company_id: quizlet.id,
-  technologies: Technology.where("name = 'PHP' OR name = 'Go' OR name = 'React'")
+  technologies: Technology.where("name = 'PHP' OR name = 'Go' OR name = 'React'"),
+  contact: 'https://quizlet.com/jobs/122993'
 )
 
 deepgram = Company.create(
@@ -54,6 +60,21 @@ Creativity, high energy, motivation, and experience building APIs and complicate
 Experience working with Tornado, AWS, GCP, Docker and fluency in Python, C++, Javascript is a big deal too.
     DESC
   company_id: deepgram.id,
-  technologies: Technology.where("name = 'Tornado' OR name = 'AWS' OR name = 'GCP' OR name = 'Docker' OR name = 'Python' OR name = 'C++' OR name = 'Javascript'")
+  technologies: Technology.where("name = 'Tornado' OR name = 'AWS' OR name = 'GCP' OR name = 'Docker' OR name = 'Python' OR name = 'C++' OR name = 'Javascript'"),
+  contact: 'careers@deepgram.com'
+)
+
+Position.create(
+  title: 'AI Scientist', 
+  location: 'San Francisco',
+  description: 
+    <<-DESC,
+ We need help building DNN models, and running it all on a HPC cluster. 
+ Creativity, high energy, motivation, and experience building DNNs in images, speech, or similar is a huge plus. 
+ Large scale computing and low level hardware experience is a great thing to have too.
+    DESC
+  company_id: deepgram.id,
+  technologies: Technology.where("name = 'HPCC' OR name = 'DNN'"),
+  contact: 'careers@deepgram.com'
 )
 

@@ -1,7 +1,9 @@
 class PositionsController < ApplicationController
-  def show
+  def index
     @positions = Position.all
+  end
 
-    puts @positions
+  def show
+    @position = Position.find(params[:id])
   end
 end

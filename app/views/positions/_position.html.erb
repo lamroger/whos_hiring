@@ -1,8 +1,7 @@
 <tr id="position-<%= position.id %>">
   <td class="company"><%= position.company.name %></td>
-  <td class="title"><%= position.title %></td>
+  <td class="title"><%= link_to(position.title, position_path(position)) %></td>
   <td class="location"><%= position.location %></td>
-  <td class="description"><%= position.description %></td>
   <td class="technologies">
     <ul class="technologies-list">
       <% position.technologies.each do |technology| %>

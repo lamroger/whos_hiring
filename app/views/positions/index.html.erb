@@ -11,7 +11,9 @@
         </tr>
       </thead>
       <tbody>
-        <%= render 'position', position: @position %>
+        <% @positions.each do |position| %>
+          <%= render 'position', position: position %>
+        <% end %>
       </tbody>
     </table>
   </div>
