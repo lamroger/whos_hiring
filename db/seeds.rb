@@ -19,7 +19,7 @@ Start learning today with flashcards, games and learning tools — all for free.
 TECHNOLOGIES = [
   'PHP', 'Go', 'React', 'Tornado', 'AWS', 
   'GCP', 'Docker', 'Python', 'C++', 'Javascript',
-  'HPCC', 'DNN'
+  'HPCC', 'DNN', 'Chef'
 ]
 
 TECHNOLOGIES.each do |name|
@@ -77,4 +77,17 @@ Position.create(
   technologies: Technology.where("name = 'HPCC' OR name = 'DNN'"),
   contact: 'careers@deepgram.com'
 )
+
+Position.create(
+  title: 'DevOps Engineer', 
+  location: 'Remote',
+  description: 
+    <<-DESC,
+We do stuff.
+    DESC
+  company_id: deepgram.id,
+  technologies: Technology.where("name = 'Docker' OR name = 'Chef'"),
+  contact: 'careers@deepgram.com'
+)
+
 
