@@ -1,9 +1,6 @@
-<div class="row">
-  <div class="col-md-8">
-    <% @companies.each do |company| %>
-      <ol class="company">
-        <%= render company %>
-      </ol>
-    <% end %>
+<div class="container">
+  <div class="company-detail">
+    <h2 class="name"><%= @company.name %></h2>
+    <div class="description"><%= @company.description %></div>
   </div>
 </div>
