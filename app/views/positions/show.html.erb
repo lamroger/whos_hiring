@@ -1,18 +1,10 @@
 <div class="container">
-  <div class="row">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Company</th>
-          <th>Position</th>
-          <th>Location</th>
-          <th>Technologies</th>
-          <th>Last Updated</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render 'position', position: @position %>
-      </tbody>
-    </table>
+  <div class="job-detail">
+    <h2 class="postion"><%= "#{@position.title} at " %><%= link_to(@position.company.name, @position.company) %></h2>
+    <div class="company-description"><%= @position.company.description %></div>
+    <h4>Job Description</h4>
+    <div class="position-description"><%= @position.description %></div>
+    <h4>Contact</h4>
+    <div class="contact"><%= @position.contact %></div>
   </div>
 </div>
