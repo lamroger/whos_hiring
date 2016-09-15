@@ -10,9 +10,7 @@
         </thead>
         <tbody>
           <% @companies.each do |company| %>
-            <ol class="company">
-              <%= render  partial: 'company', locals: { company: company } %>
-            </ol>
+            <%= render  partial: 'company', locals: { company: company } %>
           <% end %>
         </tbody>
       </table>
