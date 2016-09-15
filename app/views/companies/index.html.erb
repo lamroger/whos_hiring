@@ -1,9 +1,21 @@
-<div class="row">
-  <div class="col-md-8">
-    <% @companies.each do |company| %>
-      <ol class="company">
-        <%= render company %>
-      </ol>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Website</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @companies.each do |company| %>
+            <ol class="company">
+              <%= render  partial: 'company', locals: { company: company } %>
+            </ol>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

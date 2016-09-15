@@ -12,7 +12,7 @@
       </thead>
       <tbody>
         <% @positions.each do |position| %>
-          <%= render 'position', position: position %>
+          <%= render partial: 'shared/position', locals: { position: position } %>
         <% end %>
       </tbody>
     </table>

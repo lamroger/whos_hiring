@@ -1,5 +1,7 @@
 <tr id="position-<%= position.id %>">
-  <td class="company"><%= position.company.name %></td>
+  <% unless local_assigns[:skip_company] %>
+    <td class="company"><%= position.company.name %></td>
+  <% end %>
   <td class="title"><%= link_to(position.title, position_path(position)) %></td>
   <td class="location"><%= position.location %></td>
   <td class="technologies">
