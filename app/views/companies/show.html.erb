@@ -2,22 +2,24 @@
   <div class="company-detail">
     <h2 class="name"><%= @company.name %></h2>
     <div class="description"><%= @company.description %></div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Position</th>
-          <th>Location</th>
-          <th>Technologies</th>
-          <th>Last Updated</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @company.positions.each do |position| %>
-          <%= render partial: "shared/position",
-            locals: { skip_company: true, position: position }
-          %>
-        <% end %>
-      </tbody>
-    </table>
+    <% unless @company.positions.empty? %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Location</th>
+            <th>Technologies</th>
+            <th>Last Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @company.positions.each do |position| %>
+            <%= render partial: "shared/position",
+              locals: { skip_company: true, position: position }
+            %>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
   </div>
 </div>
