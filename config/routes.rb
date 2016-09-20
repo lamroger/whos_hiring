@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about'
 
   resources :positions, only: [:index, :show]
-  resources :companies, only: [:index, :show]
+  resources :companies, only: [:index, :show], param: :name
 end

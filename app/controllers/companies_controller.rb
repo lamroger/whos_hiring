@@ -4,6 +4,6 @@ class CompaniesController < ApplicationController
   end
   
   def show
-    @company = Company.find(params[:id])
+    @company = Company.friendly.find_by(name: params[:name])
   end
 end
