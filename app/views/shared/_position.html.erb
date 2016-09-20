@@ -2,14 +2,14 @@
   <% unless local_assigns[:skip_company] %>
     <div class="company-info">
       <div class="company-name">
-        <%= link_to(company.name, company_path(company.name))%>
+        <strong><%= link_to(company.name, company_path(company.name))%></strong>
       </div>
       <div class="company-description">
         <%= company.description %>
       </div>    
     </div>
   <% end %>
-  <div class="positions container-fluid">
+  <div class="positions">
     <% company.positions.each do |position| %>
       <div class="position row">
         <div class="title col-md-3"><%= link_to(position.title, position_path(position)) %></div>
