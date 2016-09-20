@@ -1,21 +1,8 @@
 <div class="container">
   <% if @positions %>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Company</th>
-          <th>Position</th>
-          <th>Location</th>
-          <th>Technologies</th>
-          <th>Last Updated</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @positions.each do |position| %>
-          <%= render partial: 'shared/position', locals: { position: position } %>
-        <% end %>
-      </tbody>
-    </table>
+    <% @companies.each do |company| %>
+      <%= render partial: 'shared/position', locals: { company: company } %>
+    <% end %>
   <% else %>
     <p>There are currently no open positions.</p>
   <% end %>

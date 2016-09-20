@@ -1,25 +1,12 @@
 <div class="container">
   <div class="company-detail">
-    <h2 class="name"><%= @company.name %></h2>
+    <h3 class="name"><%= @company.name %></h3>
     <div class="description"><%= @company.description %></div>
     <% unless @company.positions.empty? %>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Position</th>
-            <th>Location</th>
-            <th>Technologies</th>
-            <th>Last Updated</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @company.positions.each do |position| %>
-            <%= render partial: "shared/position",
-              locals: { skip_company: true, position: position }
-            %>
-          <% end %>
-        </tbody>
-      </table>
+        <h4 class="positions-title">Positions</h4>
+        <%= render partial: "shared/position",
+          locals: { skip_company: true, company: @company }
+        %>
     <% else %>
       <p>There are currently no open positions.</p>
     <% end %>
