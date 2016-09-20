@@ -1,24 +1,9 @@
-# README
+# Who's Hiring
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is created to give a better view into the monthly Who's Hiring threads on Hacker News.
 
-Things you may want to cover:
+The focus of this project is to provide developers the tools to optimize their job search. 
 
-* Ruby version
+## Setup
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+We use Rails 5 and Ruby 2.3.1. We recommend using rbenv to manage the ruby version on your local environment.
