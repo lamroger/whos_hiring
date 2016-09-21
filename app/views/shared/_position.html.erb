@@ -15,12 +15,10 @@
         <div class="title col-md-3"><%= link_to(position.title, position_path(position)) %></div>
         <div class="location col-md-3"><%= position.location %></div>
         <div class="technologies col-md-3">
-          <div class="technologies-list">
-            <%= position.technologies.map(&:name).join(', ') %>
-          </div>
+          <%= position.technologies.map(&:name).join(', ') %>
         </div>
         <div class="updated col-md-3">
-          <%= time_ago_in_words(position.created_at) %> ago
+          Updated <%= time_ago_in_words(position.created_at) %> ago.
         </div>
       </div>
     <% end %>
